@@ -24,8 +24,11 @@
   <p></p>
 
   <!-- Chores list -->
-  <p class="form-group" ng-repeat="chore in chores">
+  <p class="input-group" ng-repeat="chore in chores">
     <input type="text" ng-model="chore" class="form-control">
+    <span class="input-group-btn">
+      <button class="btn btn-danger" ng-click="removeChore($index)" aria-label="Remove">X</button>
+    </span>
   </p>
 </div>
 
