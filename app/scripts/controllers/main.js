@@ -7,4 +7,8 @@ angular.module('forChoreApp')
       'do the dishes',
       'wash the laundry'
     ];
+    $scope.addChore = function() {
+      $scope.chores.push($scope.chore);
+      $scope.chore = '';
+    };
   });
