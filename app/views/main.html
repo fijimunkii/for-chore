@@ -8,6 +8,7 @@
 </div>
 
 <div class="container">
+
   <h2>Chores</h2>
 
   <!-- Chores input -->
@@ -24,13 +25,16 @@
   <p></p>
 
   <!-- Chores list -->
-  <p class="input-group" ng-repeat="chore in chores">
-    <input type="text" ng-model="chore" class="form-control">
-    <span class="input-group-btn">
-      <button class="btn btn-danger" ng-click="removeChore($index)" aria-label="Remove">X</button>
-    </span>
-  </p>
-</div>
+  <div ui-sortable>
+    <p class="input-group" ng-repeat="chore in chores" style="padding:5px 10px; cursor: move;">
+      <input type="text" ng-model="chore" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-danger" ng-click="removeChore($index)" aria-label="Remove">X</button>
+      </span>
+    </p>
+  </div>
+
+</div> <!-- container -->
 
 <div class="footer">
   <p>♥ from the For Chore team</p>
