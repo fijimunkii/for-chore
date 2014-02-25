@@ -9,11 +9,26 @@
 
 <div class="container">
   <h2>Chores</h2>
+
+  <!-- Chores input -->
+  <form role="form" ng-submit="addChore()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+  <p></p>
+
+  <!-- Chores list -->
   <p class="form-group" ng-repeat="chore in chores">
-    <input type="text" ng-model="chore">
+    <input type="text" ng-model="chore" class="form-control">
   </p>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <p>♥ from the For Chore team</p>
 </div>
