@@ -3,7 +3,7 @@
 angular.module('forChoreApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
 
-    var choresinStore = localStorageService.get('chores');
+    var choresInStore = localStorageService.get('chores');
     $scope.chores = choresInStore && choresInStore.split('\n') || [];
 
     $scope.$watch('chores', function() {
