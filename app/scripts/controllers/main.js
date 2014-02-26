@@ -16,7 +16,7 @@ angular.module('forChoreApp')
       $scope.chores.push($scope.chore);
       $scope.chore = '';
     };
-  
+
     $scope.removeChore = function(index) {
       $scope.chores.splice(index, 1);
     };
