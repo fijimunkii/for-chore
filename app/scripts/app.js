@@ -5,8 +5,12 @@ angular.module('forChoreApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui'
+  'ui',
+  'LocalStorageModule'
 ])
+    .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+      localStorageServiceProvider.setPrefix('ls');
+  }])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
